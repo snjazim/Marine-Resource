@@ -14,7 +14,7 @@ import java.util.Locale;
  */
 
 
-public class GetAddressTask extends AsyncTask<String, Void, String> {
+public class GetAddressTask extends AsyncTask<String, Void, String[]> {
 
     private locationActivity activity;
 
@@ -23,7 +23,7 @@ public class GetAddressTask extends AsyncTask<String, Void, String> {
         this.activity = activity;
     }
     @Override
-    protected String doInBackground(String... params) {
+    protected String[] doInBackground(String... params) {
 
         Geocoder geocoder;
         List<Address> addresses;
@@ -35,28 +35,28 @@ public class GetAddressTask extends AsyncTask<String, Void, String> {
             //get current Street name
             String address = addresses.get(0).getAddressLine(0);
 
-            //get current province/City
-            String province = addresses.get(0).getAdminArea();
-
             //get country
             String country = addresses.get(0).getCountryName();
-
-            //get postal code
-            String postalCode = addresses.get(0).getPostalCode();
 
             //get place Name
             String knownName = addresses.get(0).getFeatureName(); // Only if available else return NULL
 
-            return "Street: " + address + "\n" + "City/Province: " + province + "\nCountry: " + country
-                    + "\nPostal CODE: " + postalCode + "\n" + "Place Name: " + knownName;
+            String []returnVal = new String[3];
+
+            returnVal[0] = address;
+            returnVal[1] = country;
+            returnVal[2] = knownName;
+
+
+            return returnVal;
 
         } catch (IOException ex) {
             ex.printStackTrace();
-            return "IOE EXCEPTION";
+            return new String[]{"IOE EXCEPTION"};
 
         } catch (IllegalArgumentException ex) {
             ex.printStackTrace();
-            return "IllegalArgument Exception";
+            return new String[]{"IllegalArgument Exception"};
         }
     }
 
@@ -65,8 +65,8 @@ public class GetAddressTask extends AsyncTask<String, Void, String> {
      * When the task finishes, onPostExecute() call back data to Activity UI and displays the address.
      * @param address
      */
-    @Override
-    protected void onPostExecute(String address) {
+
+    protected void onPostExecute(String []address) {
         // Call back Data and Display the current address in the UI
         activity.callBackDataFromAsyncTask(address);
     }
