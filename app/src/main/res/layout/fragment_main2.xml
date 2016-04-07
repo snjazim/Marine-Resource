@@ -1,341 +1,168 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:padding="30dp"
-    android:layout_marginRight="5dp"
-    android:layout_marginLeft="5dp"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="ninja.ibtehaz.fishersmarket.Main2Activity$PlaceholderFragment">
 
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent">
     <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/awareness_linear_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:columnCount="3"
+        android:columnCount="2"
         android:rowCount="3"
-        android:orientation="horizontal"
+        android:paddingLeft="0dp"
         android:visibility="visible"
-        tools:context=".GridLayoutActivity">
-
-
+        android:orientation="horizontal"
+        tools:context=".MainActivity$PlaceholderFragment">
 
         <LinearLayout
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left|top">
-
-
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_gravity="center">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="button_awareness"
+                android:text="মৎস আইন"
+                android:textSize="20dp"
                 />
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:gravity="center"
-                android:layout_height="wrap_content"
-                android:src="@drawable/fish"
-                android:padding="15dp"
-                android:id="@+id/button_awareness"
-                android:background="@drawable/circle_background"
-            />
-
-
+                android:layout_height="80dp"
+                android:src="@drawable/law"
+                android:id="@+id/prokar"
+                />
         </LinearLayout>
 
         <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_gravity="left|top">
-
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_gravity="center">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2"
+                android:text="নিষিদ্ধ এলাকা"
+                android:textSize="20dp"
                 />
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:gravity="center"
-                android:layout_height="wrap_content"
-                android:src="@drawable/fish"
-                android:padding="15dp"
-                android:id="@+id/little_fish"
-                android:background="@drawable/circle_background"
+                android:layout_height="80dp"
+                android:src="@drawable/restricted"
+
+                android:id="@+id/elaka"
                 />
-
-            </LinearLayout>
-
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="left|top">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3"
-                />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:src="@drawable/fish"
-                android:padding="15dp"
-                android:id="@+id/val_three"
-                android:background="@drawable/circle_background"
-                />
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_gravity="left|top">
-
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_gravity="center">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4"
+                android:text="নিষিদ্ধ জাল"
+                android:textSize="20dp"
                 />
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:gravity="center"
+                android:layout_height="80dp"
+                android:src="@drawable/net"
+
+                android:id="@+id/jal"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/fish"
-                android:padding="15dp"
-                android:id="@+id/val_four"
-                android:background="@drawable/circle_background"
+                android:text="মাছ ধরার সময়"
+                android:textSize="20dp"
                 />
 
+            <ImageView
+                android:layout_width="80dp"
+                android:gravity="center"
+                android:layout_height="80dp"
+                android:src="@drawable/fish"
+
+                android:id="@+id/shomoy"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="জাটকা নিধন"
+                android:textSize="20dp"
+                />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:gravity="center"
+                android:layout_height="80dp"
+                android:src="@drawable/nofish"
+
+                android:id="@+id/jatka"
+                />
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_gravity="left|top">
-
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_gravity="center">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
+                android:text="বিপদ সংকেত"
+                android:textSize="20dp"
                 />
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:gravity="center"
-                android:layout_height="wrap_content"
-                android:src="@drawable/fish"
-                android:padding="15dp"
-                android:id="@+id/val_five"
-                android:background="@drawable/circle_background"
-                />
+                android:layout_height="80dp"
+                android:src="@drawable/sos"
 
+                android:id="@+id/bipod"
+                />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="left|top">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="6"
-                />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:src="@drawable/fish"
-                android:padding="15dp"
-                android:id="@+id/SOS"
-                android:background="@drawable/circle_background"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="left|top">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="7"
-                />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:src="@drawable/fish"
-                android:padding="15dp"
-                android:id="@+id/val_seven"
-                android:background="@drawable/circle_background"
-                />
-
-        </LinearLayout>
-
 
 
     </GridLayout>
 
+    </ScrollView>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/market_login"
-        android:visibility="gone"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_weight="1.0"
-        android:background="#ABCDEF"
-        android:padding="20dp">
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:id="@+id/mobile_login"
-            android:gravity="center"
-            android:hint="Mobile Number"
-            android:background="#fff"
-            android:textColor="#000"
-            />
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:id="@+id/password_login"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:hint="Password"
-            android:password="true"
-            android:background="#fff"
-            android:textColor="#000"
-            />
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:id="@+id/login_login"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="Login"
-            android:background="#097907"
-            android:textColor="#fff"/>
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:id="@+id/newAccount_login"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="Create a new account"
-            android:background="@color/colorAccent"
-            android:textColor="#fff"/>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/market_newAccount"
-        android:visibility="gone"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_weight="1.0"
-        android:background="#ABCDEF"
-        android:padding="20dp">
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:id="@+id/mobile_newAccount"
-            android:gravity="center"
-            android:hint="Mobile Number"
-            android:background="#fff"
-            android:textColor="#000"
-            />
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:id="@+id/password_newAccount"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:hint="Password"
-            android:password="true"
-            android:background="#fff"
-            android:textColor="#000"
-            />
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:id="@+id/password_confirm_newAccount"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:hint="Password"
-            android:password="true"
-            android:background="#fff"
-            android:textColor="#000"
-            />
-
-
-        <RadioGroup
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radio_newAccount"
-                android:layout_marginTop="20dp"
-                android:text="Are you a buyer?"
-                android:textSize="20dp"
-                android:textColor="#000"
-                />
-
-        </RadioGroup>
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:id="@+id/Create_newAccount"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="Create new Account"
-            android:background="@color/colorPrimaryDark"
-            android:textColor="#fff"/>
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:id="@+id/Login_newAccount"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="Login"
-            android:background="#097907"
-            android:textColor="#fff"/>
-
-        </LinearLayout>
-
-</LinearLayout>

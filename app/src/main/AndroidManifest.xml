@@ -19,7 +19,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
@@ -65,6 +65,18 @@
         <activity android:name=".currentNet" >
         </activity>
         <activity android:name=".Time_catch_fish" >
+        </activity>
+        <activity android:name=".fish_law" >
+        </activity>
+        <activity android:name=".search_option" >
+        </activity>
+        <activity android:name=".addProduct" >
+        </activity>
+        <activity android:name=".marketplace" >
+        </activity>
+        <activity android:name=".login" >
+        </activity>
+        <activity android:name=".newAccount" >
         </activity>
     </application>
 

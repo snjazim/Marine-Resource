@@ -3,6 +3,7 @@ package ninja.ibtehaz.fishersmarket;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.VideoView;
 
 public class currentNet extends AppCompatActivity {
@@ -14,9 +15,12 @@ public class currentNet extends AppCompatActivity {
 
         //JATKA
 
-        VideoView view = (VideoView)findViewById(R.id.vv01);
+        VideoView view = (VideoView)findViewById(R.id.vv_currnetNet);
         String path = "android.resource://" + getPackageName() + "/" + R.raw.currentnet;
         view.setVideoURI(Uri.parse(path));
         view.start();
+
+        TextView tv = (TextView)findViewById(R.id.currentNetInfo);
+        tv.setText("");
     }
 }

@@ -189,7 +189,7 @@ public class locationActivity extends AppCompatActivity {
 
     public void callBackDataFromAsyncTask(String []address) {
 
-        addressText.setText("Street: " + address[0] + " \n" + "\nCountry: " + address[1] +
+        addressText.setText("Street: " + address[0] + " \n" + "Country: " + address[1] +
                 " \n" + "Place Name: " + address[2]);
 
     }

@@ -11,14 +11,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.GridLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import java.util.HashMap;
 import java.util.List;
@@ -66,6 +65,8 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+        MenuInflater inflate = getMenuInflater();
+        inflate.inflate(R.menu.menu_main2, menu);
         return true;
     }
 
@@ -74,12 +75,20 @@ public class Main2Activity extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            Intent i = new Intent(this, login.class);
+            startActivity(i);
+            return true;
+        }
+        if(id == R.id.action_account)
+        {
+            Intent i = new Intent(this, newAccount.class);
+            startActivity(i);
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -105,16 +114,16 @@ public class Main2Activity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 2 total pages.
-            return 2;
+            return 1;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Awareness";
-                case 1:
-                    return "Fishers Market - Login";
+                    return "Information";
+//                case 1:
+//                    return "Marketplace";
             }
             return null;
         }
@@ -174,99 +183,104 @@ public class Main2Activity extends AppCompatActivity {
 
             final GridLayout page1 = (GridLayout)rootView.findViewById(R.id.awareness_linear_layout);
 
-            final LinearLayout page2 = (LinearLayout)rootView.findViewById(R.id.market_login);
+            ImageView fish_rules = (ImageView)rootView.findViewById(R.id.prokar);
+            ImageView elaka = (ImageView)rootView.findViewById(R.id.elaka);
+            ImageView current_net = (ImageView)rootView.findViewById(R.id.jal);
+            ImageView time = (ImageView)rootView.findViewById(R.id.shomoy);
+            ImageView jatka_nidhon = (ImageView)rootView.findViewById(R.id.jatka);
+            ImageView bipod = (ImageView)rootView.findViewById(R.id.bipod);
 
-            final LinearLayout page3 = (LinearLayout)rootView.findViewById(R.id.market_newAccount);
+            final Intent i1 = new Intent(getContext(), fish_law.class);
+            final Intent i2 = new Intent(getContext(), locationActivity.class);
+            final Intent i3 = new Intent(getContext(), currentNet.class);
+            final Intent i4 = new Intent(getContext(), Time_catch_fish.class);
+            final Intent i5 = new Intent(getContext(), Little_fish.class);
+            final Intent i6 = new Intent(getContext(), distressSignal.class);
 
-
-            ImageView awareness = (ImageView)rootView.findViewById(R.id.button_awareness);
-            ImageView sos = (ImageView)rootView.findViewById(R.id.SOS);
-            ImageView little_fish = (ImageView)rootView.findViewById(R.id.little_fish);
-
-            final Intent i = new Intent(getContext(), locationActivity.class);
-            final  Intent i2 = new Intent(getContext(), distressSignal.class);
-            final  Intent i3 = new Intent(getContext(), Time_catch_fish.class);
-
-
-
-            little_fish.setOnClickListener(new View.OnClickListener() {
+            fish_rules.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(i3);
+                    startActivity(i1);
                 }
             });
 
-//            final Intent i = new Intent(getContext(), forbidden_Lan.class); //TODO
-            awareness.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startActivity(i);
-                }
-            });
-
-            sos.setOnClickListener(new View.OnClickListener() {
+            elaka.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     startActivity(i2);
                 }
             });
 
+            current_net.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(i3);
+                }
+            });
 
+            time.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(i4);
+                }
+            });
+
+
+            jatka_nidhon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(i5);
+                }
+            });
+
+            bipod.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(i6);
+                }
+            });
             /**
              * Market Login Layout Activation
              */
-
-            Button newAccount_login = (Button)rootView.findViewById(R.id.newAccount_login);
-
-
-            /**
-             * Market Layout Activation
-             */
-
-            Button login_newAccount = (Button)rootView.findViewById(R.id.Login_newAccount);
-
-
 
             /**
              * getArguments().getInt(ARG_SECTION_NUMBER) == 1 means the first tab and thats how you control the tabbed ELEMENTS
              *
              */
-            if(getArguments().getInt(ARG_SECTION_NUMBER) == 1 )
-            {
-                page1.setVisibility(View.VISIBLE);
-                page2.setVisibility(View.GONE);
-            }
-            else
-            {
-                page1.setVisibility(View.GONE);
-                page2.setVisibility(View.VISIBLE);
-            }
 
-
+//            if(getArguments().getInt(ARG_SECTION_NUMBER) == 1 )
+//            {
+//
+//                page1.setVisibility(View.VISIBLE);
+//                page2.setVisibility(View.GONE);
+//                page3.setVisibility(View.GONE);
+//
+//            }
             /**
              * Test Code Can Be DELETED -- TODO
              */
-            newAccount_login.setOnClickListener(new View.OnClickListener() {
 
-                @Override
-                public void onClick(View v) {
-                    page1.setVisibility(View.GONE);
-                    page2.setVisibility(View.GONE);
-                    page3.setVisibility(View.VISIBLE);
-
-                }
-            });
-
-            login_newAccount.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    page1.setVisibility(View.GONE);
-                    page2.setVisibility(View.VISIBLE);
-                    page3.setVisibility(View.GONE);
-
-                }
-            });
+//            newAccount_login.setOnClickListener(new View.OnClickListener() {
+//
+//                @Override
+//                public void onClick(View v) {
+//                    page1.setVisibility(View.GONE);
+//                    page2.setVisibility(View.GONE);
+//                    page3.setVisibility(View.VISIBLE);
+//
+//                }
+//            });
+//
+//            login_newAccount.setOnClickListener(new View.OnClickListener() {
+//
+//                @Override
+//                public void onClick(View v) {
+//                    page1.setVisibility(View.GONE);
+//                    page2.setVisibility(View.VISIBLE);
+//                    page3.setVisibility(View.GONE);
+//
+//                }
+//            });
 
 
             return rootView;
