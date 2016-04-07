@@ -33,14 +33,13 @@
             </intent-filter>
         </activity>
 
-        <receiver
-            android:name=".MyReceiver">
+        <receiver android:name=".MyReceiver" >
             <intent-filter>
-                <action android:name="android.intent.action.SCREEN_OFF"></action>
-                <action android:name="android.intent.action.SCREEN_ON"></action>
-                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"></action>
-                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"></action>
-                <action android:name="android.intent.action.ACTION_SHUTDOWN"></action>
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
             </intent-filter>
         </receiver>
 
@@ -60,6 +59,10 @@
         <activity android:name=".locationActivity" >
         </activity>
         <activity android:name=".distressSignal" >
+        </activity>
+        <activity android:name=".Little_fish" >
+        </activity>
+        <activity android:name=".currentNet" >
         </activity>
     </application>
 

@@ -16,7 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ExpandableListView;
-import android.widget.ImageButton;
+import android.widget.GridLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import java.util.HashMap;
@@ -171,20 +172,29 @@ public class Main2Activity extends AppCompatActivity {
              * Intiiazting the Layouts for each of the Views
              */
 
-            final LinearLayout page1 = (LinearLayout)rootView.findViewById(R.id.awareness_linear_layout);
+            final GridLayout page1 = (GridLayout)rootView.findViewById(R.id.awareness_linear_layout);
 
             final LinearLayout page2 = (LinearLayout)rootView.findViewById(R.id.market_login);
 
             final LinearLayout page3 = (LinearLayout)rootView.findViewById(R.id.market_newAccount);
 
 
-            ImageButton awareness = (ImageButton)rootView.findViewById(R.id.button_awareness);
-            ImageButton sos = (ImageButton)rootView.findViewById(R.id.SOS);
+            ImageView awareness = (ImageView)rootView.findViewById(R.id.button_awareness);
+            ImageView sos = (ImageView)rootView.findViewById(R.id.SOS);
+            ImageView little_fish = (ImageView)rootView.findViewById(R.id.little_fish);
 
             final Intent i = new Intent(getContext(), locationActivity.class);
             final  Intent i2 = new Intent(getContext(), distressSignal.class);
+            final  Intent i3 = new Intent(getContext(), Little_fish.class);
 
 
+
+            little_fish.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(i3);
+                }
+            });
 
 //            final Intent i = new Intent(getContext(), forbidden_Lan.class); //TODO
             awareness.setOnClickListener(new View.OnClickListener() {

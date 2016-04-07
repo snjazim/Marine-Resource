@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/fish"
                 android:padding="15dp"
-                android:id="@+id/val_twp"
+                android:id="@+id/little_fish"
                 android:background="@drawable/circle_background"
                 />
 

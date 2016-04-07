@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="ninja.ibtehaz.fishersmarket.Little_fish">
+
+    <VideoView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/vv01"
+        android:contentDescription="@string/app_name"
+        />
+
+
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/littlefish_info"
+                android:layout_marginTop="10dp"
+                android:text="1.     মৎস্য সংরক্ষণ ও সুরক্ষা আইন’অনুযায়ী আশ্বিনী প্রথম চাঁদের পূর্ণিমার দিন এবং এর আগে ও পরের পাঁচদিন করে মোট ১১ দিন ইলিশ ধরা বন্ধ থাকবে . এ সময়ে ইলিশ ধরা ও বিক্রির পাশাপাশি সরবরাহ ও মজুদও নিষিদ্ধ থাকবে। এ আদেশ অমান্য করলে তা দণ্ডনীয় অপরাধ হিসেবে বিবেচিত করে অভিযুক্তদের এক মাস থেকে সর্বোচ্চ ছয় মাস পর্যন্ত কারাদণ্ড এবং এক হাজার টাকা জরিমানা গুনতে হবে। তবে এর পরে প্রত্যেকবার অপরাধের জন্য দ্বিগুণ হারে শাস্তি ভোগ করতে হবে অভিযুক্তদের।
+
+        2.     দেশের ৪০০ কিলোমিটার নদীপথে ইলিশ বিচরণ করে। এই বিচরণ এলাকায় চার ধরনের কারেন্ট জাল ব্যবহার করে জাটকা শিকার চলছে।"
+                android:textSize="15dp"/>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+</LinearLayout>
