@@ -64,6 +64,8 @@
         </activity>
         <activity android:name=".currentNet" >
         </activity>
+        <activity android:name=".Time_catch_fish" >
+        </activity>
     </application>
 
 </manifest>

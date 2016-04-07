@@ -185,7 +185,7 @@ public class Main2Activity extends AppCompatActivity {
 
             final Intent i = new Intent(getContext(), locationActivity.class);
             final  Intent i2 = new Intent(getContext(), distressSignal.class);
-            final  Intent i3 = new Intent(getContext(), Little_fish.class);
+            final  Intent i3 = new Intent(getContext(), Time_catch_fish.class);
 
 
 
