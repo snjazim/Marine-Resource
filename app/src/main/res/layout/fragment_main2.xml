@@ -28,6 +28,16 @@
             android:layout_height="wrap_content"
             android:id="@+id/button_awareness"/>
 
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/catchFish"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/SOS"/>
+
         <ExpandableListView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

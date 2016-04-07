@@ -181,6 +181,7 @@ public class locationActivity extends AppCompatActivity {
 
                 text2Speech(new LatLng(location.getLatitude(), location.getLongitude()));
                 //get current address by invoke an AsyncTask object
+
                 new GetAddressTask(locationActivity.this).execute(String.valueOf(latitude), String.valueOf(longitude));
             }
         };
@@ -212,7 +213,7 @@ public class locationActivity extends AppCompatActivity {
             if(mCircle != null){
                 mCircle.remove();
             }
-            
+
             if(colorOnce) {
                 colorOnce = false;
             }

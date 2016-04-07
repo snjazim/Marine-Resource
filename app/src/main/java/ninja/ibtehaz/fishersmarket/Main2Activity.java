@@ -177,14 +177,25 @@ public class Main2Activity extends AppCompatActivity {
             final LinearLayout page3 = (LinearLayout)rootView.findViewById(R.id.market_newAccount);
 
             Button btn = (Button)rootView.findViewById(R.id.button_awareness);
+            Button SOS = (Button)rootView.findViewById(R.id.SOS);
 
             final Intent i = new Intent(getContext(), locationActivity.class);
+            final  Intent i2 = new Intent(getContext(), distressSignal.class);
+
+
 
 //            final Intent i = new Intent(getContext(), forbidden_Lan.class); //TODO
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     startActivity(i);
+                }
+            });
+
+            SOS.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(i2);
                 }
             });
 

@@ -1,6 +1,8 @@
 package ninja.ibtehaz.fishersmarket;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.AsyncTask;
@@ -46,6 +48,16 @@ public class GetAddressTask extends AsyncTask<String, Void, String[]> {
             returnVal[0] = address;
             returnVal[1] = country;
             returnVal[2] = knownName;
+
+            SharedPreferences sharedpreferences = activity.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);;
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+
+            editor.putString("Address", address);
+            editor.putString("District", addresses.get(0).getLocality());
+            editor.putString("Known", knownName);
+            editor.putString("Latitude",Double.parseDouble(params[0])+"");
+            editor.putString("Longitude",Double.parseDouble(params[1])+"");
+            editor.commit();
 
 
             return returnVal;
