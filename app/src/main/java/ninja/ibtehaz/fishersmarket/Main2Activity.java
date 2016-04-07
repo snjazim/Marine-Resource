@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import java.util.HashMap;
@@ -176,8 +177,9 @@ public class Main2Activity extends AppCompatActivity {
 
             final LinearLayout page3 = (LinearLayout)rootView.findViewById(R.id.market_newAccount);
 
-            Button btn = (Button)rootView.findViewById(R.id.button_awareness);
-            Button SOS = (Button)rootView.findViewById(R.id.SOS);
+
+            ImageButton awareness = (ImageButton)rootView.findViewById(R.id.button_awareness);
+            ImageButton sos = (ImageButton)rootView.findViewById(R.id.SOS);
 
             final Intent i = new Intent(getContext(), locationActivity.class);
             final  Intent i2 = new Intent(getContext(), distressSignal.class);
@@ -185,14 +187,14 @@ public class Main2Activity extends AppCompatActivity {
 
 
 //            final Intent i = new Intent(getContext(), forbidden_Lan.class); //TODO
-            btn.setOnClickListener(new View.OnClickListener() {
+            awareness.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     startActivity(i);
                 }
             });
 
-            SOS.setOnClickListener(new View.OnClickListener() {
+            sos.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     startActivity(i2);
